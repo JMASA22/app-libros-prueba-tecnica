@@ -62,7 +62,7 @@ exports.updateBook = async (req, res) => {
         await db.collection('books').doc(id).update({ title, description });
         res.json({ id, title, description });
     } catch (error) {
-        console.error('Error actualizando tarea:', error);
+        console.error('Error actualizando libro:', error);
 
         // Devolver un código de estado 400 para errores específicos
         if (error instanceof TypeError || error instanceof SyntaxError) {
@@ -70,7 +70,7 @@ exports.updateBook = async (req, res) => {
         }
 
         // Para otros errores, devolver un código de estado 500
-        res.status(500).json({ message: 'Ha ocurrido un error inesperado al actualizar la tarea.' });
+        res.status(500).json({ message: 'Ha ocurrido un error inesperado al actualizar tu libro.' });
     }
 };
 
@@ -79,17 +79,17 @@ exports.deleteBook = async (req, res) => {
     try {
         const { id } = req.params;
         await db.collection('books').doc(id).delete();
-        res.json({ message: "La tarea se ha borrado satisfactoriamente" });
+        res.json({ message: "El libro se ha borrado satisfactoriamente" });
     } catch (error) {
-        console.error('Error borrando tarea:', error);
+        console.error('Error borrando libro:', error);
 
         // Devolver un código de estado 404 si la tarea no se encuentra
         if (error.code === 5) {
-            return res.status(404).json({ message: 'La tarea no se encuentra.' });
+            return res.status(404).json({ message: 'El libro no se encuentra.' });
         }
 
         // Para otros errores, devolver un código de estado 500
-        res.status(500).json({ message: 'Ha ocurrido un error inesperado al borrar la tarea.' });
+        res.status(500).json({ message: 'Ha ocurrido un error inesperado al borrar el libro.' });
     }
 };
 
