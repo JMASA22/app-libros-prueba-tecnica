@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "expo": "^42.0.5",
     "express": "^4.19.2",
     "firebase-admin": "^12.0.0"
   }

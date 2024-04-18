@@ -9,7 +9,7 @@ const BookDetailsScreen = ({ navigation }) => {
         fetch('/api/books') /* llegir explicació sota: fetch*/
             .then(response => response.json())
             .then(data => setBooks(data))
-            .catch(error => console.error('Error  obtener libros:', error));
+            .catch(error => console.error('Error para obtener libros:', error));
     }, []);
 
     const renderItem = ({ item }) => (
@@ -36,35 +36,5 @@ const BookDetailsScreen = ({ navigation }) => {
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        padding: 20,
-    },
-    item: {
-        backgroundColor: '#fff',
-        padding: 20,
-        marginBottom: 10,
-        borderRadius: 5,
-    },
-    title: {
-        fontSize: 18,
-        fontWeight: 'bold',
-    },
-    addButton: {
-        backgroundColor: 'blue',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 15,
-        borderRadius: 5,
-        marginTop: 20,
-    },
-    addButtonText: {
-        color: '#fff',
-        fontSize: 16,
-        fontWeight: 'bold',
-    },
-});
 
 export default BookDetailsScreen;
