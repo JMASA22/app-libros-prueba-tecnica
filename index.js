@@ -29,3 +29,44 @@ app.get('/books', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
+
+/*
+
+├── index.js
+├── package.json
+├── package-lock.json
+├── .gitignore
+├── README.md
+├── AppLibrosPruebaTecnica
+    └── App.js
+    └── styles.js
+    └── package.json
+    └── package-lock.json
+    └── .expo
+    └── node_modules
+    └── src
+        └── api
+            └── api.js
+        └── navigation
+            └── MainNavigation.js
+            └── navigation.md
+        └── components
+            └── AddBook.js
+            └── BookDetails.js
+            └── BookList.js
+        └── screen
+            └── AddBookScreen.js
+            └── BookDetailsScreen.js
+            └── BookListScreen.js        
+├── .expo
+    └──
+├── api
+    └── books.js
+├── node_modules
+    └──
+├── controllers/
+│   └── booksController.js
+└── config/
+    └── firebase-credentials.json
+
+    */

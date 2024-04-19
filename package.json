@@ -10,8 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "expo": "^42.0.5",
+    "expo": "^50.0.0",
     "express": "^4.19.2",
-    "firebase-admin": "^12.0.0"
+    "firebase-admin": "^12.0.0",
+    "react-native": "0.71.14",
+    "react": "18.2.0"
   }
 }
