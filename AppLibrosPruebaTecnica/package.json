@@ -7,8 +7,5 @@
   },
   "dependencies": {
     "react-native": "0.71.3"
-  },
-  "devDependencies": {
-    "expo-cli": "^6.3.10"
   }
 }
